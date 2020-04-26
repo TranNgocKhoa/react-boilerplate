@@ -1,0 +1,44 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.1",
+  "description": "React Boilerplate",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --open --mode development",
+    "build": "webpack --config webpack.config.js --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reactjs",
+    "react",
+    "react-boilerplate"
+  ],
+  "author": "Khoa Ngoc Tran",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.9.34",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.2.0",
+    "less": "^3.11.1",
+    "less-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
