@@ -13,6 +13,7 @@ let config = {
     mode: environment.production,
     entry: {
         index: "./src/index.js",
+        login: "./src/login/index.js",
         style: "./src/assets/_main.scss"
     },
     output: {
@@ -23,7 +24,7 @@ let config = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/, //.js or .jsx at the end
+                test: /\.js$|jsx/, //.js or .jsx at the end
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: "babel-loader",
@@ -34,13 +35,14 @@ let config = {
                         ],
                         plugins: [
                             "@babel/plugin-proposal-object-rest-spread",
-                            "@babel/transform-react-jsx"
+                            "@babel/plugin-proposal-class-properties",
+                            "@babel/transform-react-jsx",
                         ]
                     }
                 },
             },
             {
-                test: /\.scss$/,
+                test: /\.css$|scss$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -63,6 +65,7 @@ let config = {
                             sourceMap: true,
                         },
                     },
+                    'style-loader',
                     'css-loader',
                     'less-loader',
                 ],
